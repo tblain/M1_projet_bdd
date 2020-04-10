@@ -1,4 +1,4 @@
-import parser
+from parser import Parser
 import preprocessing
 import stratification
 
@@ -7,8 +7,9 @@ if __name__ == "__main__":
     lines = text_file.readlines()
 
     # parsing des lignes
-    parsed = parser.parsing(lines)
-
+    parser = Parser()
+    parser.parsing(lines)
+    
     # preprocessing sur les lignes parsees
     preprocess_data = preprocessing.preprocess(parsed)
 

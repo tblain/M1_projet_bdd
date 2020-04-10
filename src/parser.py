@@ -1,10 +1,17 @@
 
 class Parser(object):
-    def __init__(self, file):
+    def __init__(self):
         self.edb = []
         self.idb = {}
 
-    def parse(self, lines):
+    def parsing(self, lines):
+        """
+        edb = ['Person']
+        idb = {
+            'Singleman' : [["Man", False], ["Husband", True]],
+            'Predicat2' : [["NameOfPredicatOrEntity", "isNegated"]]
+        }
+        """
         i = 0
 
         # parse entity
