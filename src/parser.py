@@ -52,7 +52,8 @@ def parsing(lines):
 
 
 def remove_par(string):
-    # Man(x), not Husband(x)
+    # string, example: "Man(x), not Husband(x)"
+    # return "Man, not Husband"
     while ")" in string:
         right = string.rfind(")")
         left = string.rfind("(")
