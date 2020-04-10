@@ -41,11 +41,13 @@ def parsing(lines):
                 # nonnegated subgoal
                 preds_right.append([p.split("(")[0].strip(), False])
 
+        preds_right[-1][0] = preds_right[-1][0][:-1]
+
         if left in idb:
             # list merge
-            idb[left] += preds_right
+            idb[left] += [preds_right]
         else:
-            idb[left] = preds_right
+            idb[left] = [preds_right]
 
         i += 1
     return edb, idb

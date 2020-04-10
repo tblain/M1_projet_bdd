@@ -1,6 +1,6 @@
 from parser import parsing
-# import preprocessing
-# import stratification
+import preprocessor
+from stratification import stratify
 
 if __name__ == "__main__":
     text_file = open("../data/test1", "r")
@@ -12,11 +12,8 @@ if __name__ == "__main__":
     print(edb)
     print(idb)
 
-    # # preprocessing sur les lignes parsees
-    # preprocess_data = preprocessing.preprocess(parsed)
-
     # # stratification
-    # strats = stratification.stratification(preprocess_data)
+    strats = stratify(edb, idb)
 
     # # affichage du resultat
-    # print(strats)
+    print(strats)
