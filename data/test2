@@ -9,5 +9,6 @@ getInfosFromTv(id) :- Person(id,_,D), Boomer(D).
 getInfosFromTv(id) :- Person(id,_,D), GenX(D).
 getInfosFromOnlineVideos(id) :- Person(id,_,D), Millenial(D).
 getInfosFromOnlineVideos(id) :- Person(id,_,D), GenZ(D).
+OkBoomer(id) :- Person(id,_,D), Boomer(D).
 
 
