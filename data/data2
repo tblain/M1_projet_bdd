@@ -1,0 +1,13 @@
+% EDB
+Person(id, name, birthDate).
+% IDB
+Boomer(D) :- Between(1946, D, 1965).
+GenX(D) :- Between(1966, D, 1976).
+Millenial(D) :- Between(1977, D, 1994).
+GenZ(D) :- Between(1995, D, 2012).
+getInfosFromTv(id) :- Person(id,_,D), Boomer(D).
+getInfosFromTv(id) :- Person(id,_,D), GenX(D).
+getInfosFromOnlineVideos(id) :- Person(id,_,D), Millenial(D).
+getInfosFromOnlineVideos(id) :- Person(id,_,D), GenZ(D).
+
+
