@@ -1,0 +1,11 @@
+% EDB
+R(x).
+R1(x).
+R2(x).
+R3(x).
+R4(x).
+% IDB
+S(x):- R1(x), not R(x).
+T(x):- R2(x), not R(x).
+U(x):- R3(x), not T(x).
+V(x):- R4(x), not S(x), not U(x).

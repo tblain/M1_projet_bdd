@@ -1,0 +1,6 @@
+% EDB
+Par(c, p).
+% IDB
+Sib(x, y):- Par(x, p), Par(y, p).
+Cousin(x, y):- Sib(x, y).
+Cousin(x, y):- Par(x, xp), Par(y, yp), Cousin(xp, yp).

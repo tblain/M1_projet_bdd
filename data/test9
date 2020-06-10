@@ -1,0 +1,14 @@
+% EDB
+Writer(x).
+Painter(x).
+Sculptor(x).
+Work(x).
+% IDB
+Artist(x):- Writer(x).
+Artist(x):- Painter(x).
+Artist(x):- Sculptor(x).
+
+Realise(x, y):- Artist(x), Work(y).
+Painting(x):- Realise(y, x), Painter(y).
+Book(x):- Realise(y, x), Writer(y).
+Sculpture(x):- Realise(y, x), Sculptor(y).

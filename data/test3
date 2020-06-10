@@ -1,0 +1,10 @@
+% EDB
+R1(x).
+R2(x).
+R3(x).
+R4(x).
+% IDB
+S(x):- R1(x),R(x)
+T(x):- R2(x),R(x)
+U(x):- R3(x),T(x)
+W(x):- R4(x),S(y),U(y)

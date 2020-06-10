@@ -1,0 +1,8 @@
+% EDB
+Ville(x).
+Departement(x).
+Region(x).
+% IDB
+InDepartement(x, y):- Ville(x).
+InRegion(x, y):- Departement(x).
+InRegion(x, y):- Ville(x), InDepartement(x, z), InRegion(z, y).
