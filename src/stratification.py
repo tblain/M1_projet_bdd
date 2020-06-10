@@ -8,7 +8,7 @@ def stratify(edb, idb):
     for d in idb:
         stratum_dic[d] = 1
 
-    print(stratum_dic)
+    # print(stratum_dic)
 
     no_changes = False
 
@@ -31,7 +31,7 @@ def stratify(edb, idb):
                     max_level = max(max_level, new_val)
                     no_changes = False
 
-    print("stratum_dic: ", stratum_dic)
+    # print("stratum_dic: ", stratum_dic)
 
     stratum = []
     for i in range(max_level):
